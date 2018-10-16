@@ -48,7 +48,7 @@ public class DeviceListActivity extends AppCompatActivity {
         //***************
         checkBTState();
 
-        textView1 = findViewById(R.id.connecting);
+//        textView1 = findViewById(R.id.connecting);
         textView1.setTextSize(40);
         textView1.setText(" ");
 

@@ -4,4 +4,17 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="linearSeparador">#696969</color>
+
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorGrey">#EEEEEE</color>
+    <color name="colorWhiteBlue">#3498db</color>
+    <color name="colorYellow">#ffff00</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorOrange">#FF9800</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorGreenM">#00CE08</color>
+    <color name="colorCloud">#3498db</color>
+    <color name="colorTrans">#00000000</color>
+    <color name="colorButton">#2980b9</color>
 </resources>

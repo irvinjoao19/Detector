@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -25,13 +26,27 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".views.activities.DeviceListActivity">
+        <activity android:name=".views.activities.DeviceListActivity"></activity>
+        <activity android:name=".views.activities.Main2Activity"></activity>
+        <activity android:name=".views.activities.Main3Activity" />
+        <activity android:name=".views.activities.Main4Activity"></activity>
+        <activity android:name=".views.activities.EjemploActivity"></activity>
+
+        <activity android:name=".android.bluetoothchat.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".views.activities.Main2Activity"></activity>
+
+        <activity
+            android:name=".android.bluetoothchat.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
+
     </application>
+
 </manifest>
