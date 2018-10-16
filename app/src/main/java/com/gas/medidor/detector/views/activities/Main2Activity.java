@@ -1,5 +1,6 @@
 package com.gas.medidor.detector.views.activities;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -20,7 +21,6 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class Main2Activity extends AppCompatActivity {
-//    https://github.com/patriotaSJ/Bluetooth
 
     Button btnOn, btnOff;
     TextView txtArduino, txtString, txtStringLength, sensorView0, sensorView1, sensorView2, sensorView3;
@@ -40,24 +40,26 @@ public class Main2Activity extends AppCompatActivity {
     // String for MAC address
     private static String address = null;
 
+    @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         //Link the buttons and textViews to respective views
-        btnOn = (Button) findViewById(R.id.buttonOn);
-        btnOff = (Button) findViewById(R.id.buttonOff);
-        txtString = (TextView) findViewById(R.id.txtString);
-        txtStringLength = (TextView) findViewById(R.id.testView1);
-        sensorView0 = (TextView) findViewById(R.id.sensorView0);
-        sensorView1 = (TextView) findViewById(R.id.sensorView1);
-        sensorView2 = (TextView) findViewById(R.id.sensorView2);
-        sensorView3 = (TextView) findViewById(R.id.sensorView3);
+        btnOn = findViewById(R.id.buttonOn);
+        btnOff = findViewById(R.id.buttonOff);
+        txtString = findViewById(R.id.txtString);
+        txtStringLength = findViewById(R.id.testView1);
+        sensorView0 = findViewById(R.id.sensorView0);
+        sensorView1 = findViewById(R.id.sensorView1);
+        sensorView2 = findViewById(R.id.sensorView2);
+        sensorView3 = findViewById(R.id.sensorView3);
 
-        txtSendorLDR = (TextView) findViewById(R.id.tv_sendorldr);
+        txtSendorLDR = findViewById(R.id.tv_sendorldr);
 
 
         bluetoothIn = new Handler() {
+            @SuppressLint("SetTextI18n")
             public void handleMessage(android.os.Message msg) {
                 if (msg.what == handlerState) {                                        //if message is what we want
                     String readMessage = (String) msg.obj;                                                                // msg.arg1 = bytes from connect thread
@@ -188,7 +190,7 @@ public class Main2Activity extends AppCompatActivity {
         private final OutputStream mmOutStream;
 
         //creation of the connect thread
-        public ConnectedThread(BluetoothSocket socket) {
+        ConnectedThread(BluetoothSocket socket) {
             InputStream tmpIn = null;
             OutputStream tmpOut = null;
 
@@ -196,7 +198,7 @@ public class Main2Activity extends AppCompatActivity {
                 //Create I/O streams for connection
                 tmpIn = socket.getInputStream();
                 tmpOut = socket.getOutputStream();
-            } catch (IOException e) {
+            } catch (IOException ignored) {
             }
 
             mmInStream = tmpIn;
@@ -222,7 +224,7 @@ public class Main2Activity extends AppCompatActivity {
         }
 
         //write method
-        public void write(String input) {
+        void write(String input) {
             byte[] msgBuffer = input.getBytes();           //converts entered String into bytes
             try {
                 mmOutStream.write(msgBuffer);                //write bytes over BT connection via outstream
