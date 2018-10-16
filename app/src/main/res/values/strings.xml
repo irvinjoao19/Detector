@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Detector</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hola Mundo</string>
+    <string name="none_paired">Ningun dispositivo pudo ser emparejado</string>
+    <string name="si_no_hay_dispositivos_en_la_lista_por_favor_enlaza_tu_dispositivo_en_la_configuraci_n_de_android">Si no hay dispositivos en la lista, por favor enlaza tu dispositivo en la configuración de Android</string>
+</resources>
