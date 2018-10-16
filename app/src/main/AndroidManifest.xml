@@ -21,10 +21,6 @@
 
         </activity>
 
-        <receiver
-            android:name=".services.BluetoothReceiver"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity android:name=".views.activities.DeviceListActivity"></activity>
         <activity android:name=".views.activities.Main2Activity"></activity>
@@ -32,7 +28,10 @@
         <activity android:name=".views.activities.Main4Activity"></activity>
         <activity android:name=".views.activities.EjemploActivity"></activity>
 
-        <activity android:name=".android.bluetoothchat.MainActivity">
+        <activity
+            android:name=".android.bluetoothchat.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +44,11 @@
             android:name=".android.bluetoothchat.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/select_device"
-            android:theme="@android:style/Theme.Holo.Dialog"/>
+            android:theme="@android:style/Theme.Holo.Dialog">
+
+
+        </activity>
+
 
     </application>
 

@@ -38,6 +38,7 @@ import com.gas.medidor.detector.android.common.logger.MessageOnlyLogFilter;
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
 public class MainActivity extends SampleActivityBase {
+//    https://github.com/googlesamples/android-BluetoothChat.git
 
     public static final String TAG = "MainActivity";
 

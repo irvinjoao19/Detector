@@ -22,6 +22,8 @@
 
     <style name="Theme.Sample" parent="Theme.Base" />
 
+    <style name="AppTheme" parent="Theme.Sample" />
+
     <style name="Widget" />
 
     <style name="Widget.SampleMessage">
