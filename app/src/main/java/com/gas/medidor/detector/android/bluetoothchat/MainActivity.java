@@ -40,6 +40,9 @@ import com.gas.medidor.detector.android.common.logger.MessageOnlyLogFilter;
 public class MainActivity extends SampleActivityBase {
 //    https://github.com/googlesamples/android-BluetoothChat.git
 
+    // TODO AQUI
+//    https://github.com/zesteros/ArduinoAirQualityMonitor.git
+
     public static final String TAG = "MainActivity";
 
     // Whether the Log Fragment is currently shown
