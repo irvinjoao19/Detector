@@ -17,27 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".views.activities.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.activities.DeviceListActivity" />
-        <activity android:name=".views.activities.Main2Activity" />
-        <activity android:name=".views.activities.Main3Activity" />
-        <activity android:name=".views.activities.Main4Activity" />
-        <activity android:name=".views.activities.EjemploActivity" />
-        <activity
-            android:name=".android.bluetoothchat.MainActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name"></activity>
-        <activity
-            android:name=".android.bluetoothchat.DeviceListActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/select_device"
-            android:theme="@android:style/Theme.Holo.Dialog"></activity>
     </application>
-
 </manifest>
